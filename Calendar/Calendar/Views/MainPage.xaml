@@ -5,17 +5,20 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="{Binding Title}">
 
-    <StackLayout x:Name="Registration"
-        Margin="15"
-        Orientation="Vertical"
-        VerticalOptions="Center">
-
+    <StackLayout x:Name="Registration">
+        <Image
+            HeightRequest="150"
+            HorizontalOptions="Center"
+            Source="sleep.png" />
         <Label
             FontSize="Large"
             HorizontalOptions="Center"
             Text="Enter Login"
             TextColor="Black" />
-        <Entry FontSize="Medium" Placeholder="Login" />
+        <Entry 
+            FontSize="Medium" 
+            Placeholder="Login" 
+            Text="{Binding Login, Mode=TwoWay}"/>
         <Label
             FontSize="Large"
             HorizontalOptions="Center"
@@ -24,7 +27,8 @@
         <Entry
             FontSize="Medium"
             IsPassword="True"
-            Placeholder="Password" />
+            Placeholder="Password"
+            Text="{Binding Password, Mode=TwoWay}"/>
         <Button
             Command="{Binding NavigationCommand}"
             HorizontalOptions="CenterAndExpand"

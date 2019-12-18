@@ -6,9 +6,21 @@
     xmlns:prism="http://prismlibrary.com"
     prism:ViewModelLocator.AutowireViewModel="True">
     <ContentPage.Content>
-        <StackLayout x:Name="HistoryPage">
-            <Entry FontSize="Medium" Placeholder="Enter password" />
-            <Entry FontSize="Medium" Placeholder="Repeat password" />
+        <StackLayout x:Name="HistoryPage" VerticalOptions="Center">
+            <Entry FontSize="Medium" 
+                   HorizontalOptions="Center" 
+                   Placeholder="Enter password" 
+                   IsPassword="True"
+                   Text="{Binding EnterPassword}"/>
+            <Entry FontSize="Medium" 
+                   HorizontalOptions="Center" 
+                   IsPassword="True"
+                   Placeholder="Repeat password" 
+                   Text="{Binding RepeatPassword}"/>
+            <Label x:Name="noValidate" 
+                   TextColor="Red"
+                   HorizontalOptions="Center"
+                   Text="{Binding NoValidate, Mode=OneWay}"/>
             <Button
                 Command="{Binding navigationCommand}"
                 HorizontalOptions="Center"

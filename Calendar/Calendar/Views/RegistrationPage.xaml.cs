@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using Calendar.ViewModels;
+using Xamarin.Forms;
 
 namespace Calendar.Views
 {
@@ -7,6 +8,7 @@ namespace Calendar.Views
         public RegistrationPage()
         {
             InitializeComponent();
+            BindingContext = new RegistrationPageViewModel();
         }
     }
 }

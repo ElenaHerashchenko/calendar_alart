@@ -9,6 +9,11 @@ namespace Calendar.ViewModels
 {
     public class ViewModelBase : BindableBase, IInitialize, INavigationAware, IDestructible
     {
+
+        public ViewModelBase()
+        {
+            //GetDependencies();
+        }
         protected INavigationService NavigationService { get; private set; }
 
         private string _title;

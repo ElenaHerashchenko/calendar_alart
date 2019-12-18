@@ -1,22 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:prism="http://prismlibrary.com"
-             xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar"
-             prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="Calendar.Views.CalendarPage"
-         Title="Сalendar" BackgroundColor="#F0FFFF">
-        <StackLayout>
-            <controls:Calendar Padding="10,0,10,0" 
-                           SelectedBorderWidth="4" 
-                           DisabledBorderColor="Black"
-                           ShowNumberOfWeek="false"
-                           StartDay="Monday"
-                           TitleLabelTextColor="Purple"
-                           TitleLeftArrowTextColor="Blue"
-                           SelectedDate="{Binding Date}"
-                           SpecialDates="{Binding Attendances}"
-                           DateCommand="{Binding DateChosen}"/>
-        </StackLayout>
-  
+<ContentPage
+    x:Class="Calendar.Views.CalendarPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar"
+    xmlns:prism="http://prismlibrary.com"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <Grid x:Name="Grib">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            Text="Вс" />
+        <Label
+            Grid.Row="0"
+            Grid.Column="1"
+            Text="Пн" />
+        <Label
+            Grid.Row="0"
+            Grid.Column="2"
+            Text="Вт" />
+        <Label
+            Grid.Row="0"
+            Grid.Column="3"
+            Text="Ср" />
+        <Label
+            Grid.Row="0"
+            Grid.Column="4"
+            Text="Чт" />
+        <Label
+            Grid.Row="0"
+            Grid.Column="5"
+            Text="Пт" />
+        <Label
+            Grid.Row="0"
+            Grid.Column="6"
+            Text="Сб" />
+
+        <Button
+            Grid.Row="8"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Clicked="PreviosButton_Clicked"
+            Text="Previos" />
+        <Button
+            Grid.Row="8"
+            Grid.Column="5"
+            Grid.ColumnSpan="2"
+            Clicked="NextButton_Clicked"
+            Text="Next" />
+        <Label
+            x:Name="lblMonth"
+            Grid.Row="8"
+            Grid.Column="2"
+            Grid.ColumnSpan="3"
+            HorizontalOptions="CenterAndExpand" />
+    </Grid>
+
 </ContentPage>

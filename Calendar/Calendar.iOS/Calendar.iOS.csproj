@@ -202,7 +202,22 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Flower.png" />
+    <BundleResource Include="Resources\sleep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\history.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\calend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\acc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\account.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

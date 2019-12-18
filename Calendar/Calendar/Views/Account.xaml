@@ -6,18 +6,43 @@
              x:Class="Calendar.Views.Account"
              Title="Account">
     <ContentPage.Content>
-        <StackLayout x:Name="AccountPage">
-            <Label Text="Ragistration" HorizontalOptions="Center" FontSize="Large" TextColor="Black"/>
-            <Label Text="First name" />
-            <Entry Text="{Binding Name}" FontSize="Medium" />
-            <Label Text="Second name" />
-            <Entry Text="{Binding Email}" FontSize="Medium" />
-            <Label Text="Phone" />
-            <Entry Text="{Binding Phone}" FontSize="Medium" />
-            <Label Text="Email" />
-            <Entry Text="{Binding Phone}" FontSize="Medium" />
-            <Label Text="Age" />
-            <Button Command="{Binding NavigationCommand}" Text="Registration" />
+
+        <StackLayout x:Name="AccountPage" Padding="30" Orientation="Vertical">
+            <Image HeightRequest="120" Source="account" />
+            <ScrollView>
+                <StackLayout Margin="50">
+                    <Label
+                        FontSize="Large"
+                        HorizontalOptions="Center"
+                        Text="Account"
+                        TextColor="Black" />
+                    <Entry
+                        FontSize="Medium"
+                        Placeholder="First name"
+                        Text="{Binding FirstName, Mode=TwoWay}" />
+                    <Entry
+                        FontSize="Medium"
+                        Placeholder="Second Name"
+                        Text="{Binding SecondName, Mode=TwoWay}" />
+
+                    <Entry
+                        FontSize="Medium"
+                        Placeholder="Phone"
+                        Text="{Binding Phone, Mode=TwoWay}" />
+
+                    <Entry
+                        FontSize="Medium"
+                        Placeholder="Age"
+                        Keyboard="Numeric"
+                        Text="{Binding Age, Mode=TwoWay}" />
+                    <Entry
+                        FontSize="Medium"
+                        Placeholder="Email"
+                        Text="{Binding Email, Mode=TwoWay}" />
+
+
+                </StackLayout>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 

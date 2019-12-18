@@ -37,7 +37,7 @@ namespace Calendar
             containerRegistry.RegisterForNavigation<CalendarPage, CalendarPageViewModel>();
 
 
-            containerRegistry.Register<IUserModel, UserModel>();
+            //containerRegistry.Register<IUserModel, UserModel>();
 
 
             containerRegistry.RegisterForNavigation<Account, AccountViewModel>();

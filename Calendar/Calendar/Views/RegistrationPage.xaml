@@ -5,43 +5,55 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:prism="http://prismlibrary.com"
     prism:ViewModelLocator.AutowireViewModel="True">
-    <ContentPage.Content>
-        <StackLayout x:Name="friendStack">
-
-
-            <Entry
-                FontSize="Medium"
-                Keyboard="Text"
-                Placeholder="First Name"
-                Text="{Binding Name}" />
-
-            <Entry
-                FontSize="Medium"
-                Keyboard="Text"
-                Placeholder="Second Name"
-                Text="{Binding Email}" />
-
-            <Entry
-                FontSize="Medium"
-                Keyboard="Telephone"
-                Placeholder="Phone"
-                Text="{Binding Phone}" />
-
-            <Entry
-                FontSize="Medium"
-                Keyboard="Email"
-                Placeholder="Email"
-                Text="{Binding Phone}" />
-            <Entry
-                FontSize="Medium"
-                Keyboard="Numeric"
-                Placeholder="Age"
-                Text="{Binding Phone}" />
-            <Button
-                Command="{Binding NavigationCommand}"
-                HorizontalOptions="Center"
-                Text="Registration" />
-
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout
+        Margin="30,0,30,0"
+        Orientation="Vertical"
+        VerticalOptions="CenterAndExpand">
+        <Image
+            HeightRequest="150"
+            HorizontalOptions="Center"
+            Source="Resources/drowbles/sleep.png" />
+        <ScrollView>
+            <StackLayout>
+                <Entry
+                    x:Name="regFirstName"
+                    Placeholder="FirstName"
+                    Text="{Binding FirstName, Mode=TwoWay}" />
+                <Entry
+                    x:Name="regSecondName"
+                    Placeholder="SecondName"
+                    Text="{Binding SecondName, Mode=TwoWay}" />
+                <Entry
+                    x:Name="regPhone"
+                    Placeholder="+38(0xx)xxx-xx-xx"
+                    Text="{Binding Phone, Mode=TwoWay}" />
+                <Entry
+                    x:Name="regEmail"
+                    Placeholder="Email"
+                    Text="{Binding Email, Mode=TwoWay}" />
+                <Entry
+                    x:Name="regAge"
+                    Placeholder="Age"
+                     Keyboard="Numeric"
+                    Text="{Binding Age, Mode=TwoWay}" />
+                <Entry
+                    x:Name="regLogin"
+                    Placeholder="Login"
+                    Text="{Binding Login, Mode=TwoWay}" />
+                <Entry
+                    x:Name="regPassword"
+                    Placeholder="Password"
+                    IsPassword ="True"
+                    Text="{Binding Password, Mode=TwoWay}" />
+                <Label
+                    x:Name="errorMessage"
+                    Text="{Binding Error, Mode=OneWay}"
+                    TextColor="Red" />
+            </StackLayout>
+        </ScrollView>
+        <Button
+            x:Name="registrationButton"
+            Command="{Binding NavigationCommand}"
+            Text="To Register" />
+    </StackLayout>
 </ContentPage>

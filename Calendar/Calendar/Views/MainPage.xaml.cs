@@ -12,7 +12,6 @@ namespace Calendar.Views
         public MainPage()
         {
             InitializeComponent();
-         
         }
     }
 }

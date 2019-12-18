@@ -20,14 +20,14 @@ namespace Calendar.ViewModels
             _navigationService = navigationService ?? throw new ArgumentNullException(nameof(_navigationService));
         }
 
-        //private System.Windows.Input.ICommand _navigationCommand;
-        //public ICommand NavigationCommand => _navigationCommand
-        //      ?? (_navigationCommand = new
-        //         Command(OnNavigationCommand));
+        private System.Windows.Input.ICommand _navigationCommand;
+        public ICommand NavigationCommand => _navigationCommand
+              ?? (_navigationCommand = new
+                 Command(OnNavigationCommand));
 
-        //private async void OnNavigationCommand(object obj)
-        //{
-        //    await _navigationService.NavigateAsync(nameof(Alarm));
-        //}
+        private async void OnNavigationCommand(object obj)
+        {
+            await _navigationService.NavigateAsync(nameof(Alarm));
+        }
     }
 }
