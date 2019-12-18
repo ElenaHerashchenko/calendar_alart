@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Calendar.Views.RegistrationPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <ContentPage.Content>
+        <StackLayout x:Name="friendStack">
+
+
+            <Entry
+                FontSize="Medium"
+                Keyboard="Text"
+                Placeholder="First Name"
+                Text="{Binding Name}" />
+
+            <Entry
+                FontSize="Medium"
+                Keyboard="Text"
+                Placeholder="Second Name"
+                Text="{Binding Email}" />
+
+            <Entry
+                FontSize="Medium"
+                Keyboard="Telephone"
+                Placeholder="Phone"
+                Text="{Binding Phone}" />
+
+            <Entry
+                FontSize="Medium"
+                Keyboard="Email"
+                Placeholder="Email"
+                Text="{Binding Phone}" />
+            <Entry
+                FontSize="Medium"
+                Keyboard="Numeric"
+                Placeholder="Age"
+                Text="{Binding Phone}" />
+            <Button
+                Command="{Binding NavigationCommand}"
+                HorizontalOptions="Center"
+                Text="Registration" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

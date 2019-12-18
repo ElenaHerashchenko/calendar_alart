@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+            xmlns:views="clr-namespace:Calendar.Views"
+            prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Calendar.Views.Tabs">
+
+
+    <views:Alarm Title="Alarm"/>
+    <views:CalendarPage Title="Calendar"/>
+    <views:History Title="History"/>
+    <views:Account Title="Account"/>
+    <!--<ContentPage Title="Alarm" BackgroundColor="#FFFFE0">
+
+        <TableView >
+            <TableRoot>
+                <TableSection Title="Choose the time" TextColor="BlueViolet">
+                    <SwitchCell Text="07:00" OnChanged="switcher_Toggled"  On="false" />
+                    <SwitchCell Text="07:05"  OnChanged="switcher_Toggled" On="false" />
+                    <SwitchCell Text="07:10" OnChanged="switcher_Toggled"  On="false" />
+                    <SwitchCell Text="07:15"  OnChanged="switcher_Toggled" On="false" />
+                    <SwitchCell Text="07:20" OnChanged="switcher_Toggled"  On="false" />
+                    <SwitchCell Text="07:25"  OnChanged="switcher_Toggled" On="false" />
+                    <SwitchCell Text="07:30" OnChanged="switcher_Toggled"  On="false" />
+                    <SwitchCell Text="07:35"  OnChanged="switcher_Toggled" On="false" />
+                    <SwitchCell Text="07:40" OnChanged="switcher_Toggled"  On="false" />
+                    <SwitchCell Text="07:45"  OnChanged="switcher_Toggled" On="false" />
+                    <SwitchCell Text="07:50"  OnChanged="switcher_Toggled"  On="false" />
+                    <SwitchCell Text="07:55" OnChanged="switcher_Toggled" On="false" />
+                    <SwitchCell Text="08:00" OnChanged="switcher_Toggled"  On="false" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage>-->
+
+</TabbedPage>

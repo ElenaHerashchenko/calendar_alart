@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Calendar.Views.Account"
+             Title="Account">
+    <ContentPage.Content>
+        <StackLayout x:Name="AccountPage">
+            <Label Text="Ragistration" HorizontalOptions="Center" FontSize="Large" TextColor="Black"/>
+            <Label Text="First name" />
+            <Entry Text="{Binding Name}" FontSize="Medium" />
+            <Label Text="Second name" />
+            <Entry Text="{Binding Email}" FontSize="Medium" />
+            <Label Text="Phone" />
+            <Entry Text="{Binding Phone}" FontSize="Medium" />
+            <Label Text="Email" />
+            <Entry Text="{Binding Phone}" FontSize="Medium" />
+            <Label Text="Age" />
+            <Button Command="{Binding NavigationCommand}" Text="Registration" />
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

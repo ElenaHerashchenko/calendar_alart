@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Calendar.Views.RecoverPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <ContentPage.Content>
+        <StackLayout x:Name="HistoryPage">
+            <Entry FontSize="Medium" Placeholder="Enter password" />
+            <Entry FontSize="Medium" Placeholder="Repeat password" />
+            <Button
+                Command="{Binding navigationCommand}"
+                HorizontalOptions="Center"
+                Text="Save" />
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
